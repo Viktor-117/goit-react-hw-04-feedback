@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import { Text } from './Statistics.styled';
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
   return (
     <div>
       <div>
@@ -13,7 +19,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       </div>
     </div>
   );
-};
+}
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
@@ -21,5 +27,3 @@ Statistics.propTypes = {
   bad: PropTypes.number.isRequired,
   positivePercentage: PropTypes.number.isRequired,
 };
-
-export default Statistics;
